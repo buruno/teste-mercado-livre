@@ -1,0 +1,26 @@
+{
+  "name": "teste_frontend_ml-bruno_ishikawa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.ts",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "ts-node-dev --respawn --transpile-only server/index.ts",
+    "dev": "concurrently -r --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "postinstall": "cd client && npm install"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "express": "^4.16.4",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.12",
+    "@types/react-helmet": "^6.1.5",
+    "concurrently": "^4.0.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.5"
+  },
+  "author": "Bruno Ishikawa"
+}
